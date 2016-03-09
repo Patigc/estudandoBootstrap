@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Descrição De Classes - Bootstrap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+</head>
+<body>
+	<nav class=" navbar-fixed-top bg-azul">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <p class="navbar-text">Estudando Bootstrap - Classes descrição</p>
+            </div>
+            <div class="collapse navbar-collapse" id="nav-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+					<li><a href="conceito.html">Conceito</a></li>
+					<li class="active"><a href="classe.html" alt="">Classes</a></li>
+					<li><a href="praticando.html">Praticando</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="jumbotron" style="background:#6a4f93;">
+		<h1>Descrição das classes  Bootstrap!</h1>
+   </header>
+	<div class="container-fluid">		
+	   <div role="main">
+		<section class="row">
+			<article class="col-md-12">	   				   
+				<h3 id="estrutura">Trabalhando estrutura</h3>
+				<h4>container:</h4>
+				<p>
+					Esse elemento é padrão do bootstrap e é uma das classes mais utilizadas e importantes do framework. Com ela informamos que a partir daquele elemento nós teremos um container que possui largura específica e que se adapta com relação a resolução do navegador.
+					Deem uma observada no código e percebam que essa classe é chamada 3 vezes: no navbar, outra no conteúdo e no footer.
+					Sem essa classe nós deixamos de limitar a largura do site, sem falar que a falta dela pode acarretar alguns problemas no layout.
+					Portanto, sempre que for criar uma nova área que engloba as colunas, deve-se invocar essa classe.
+					OBS: A classe “container” é chamada somente uma vez por área.				
+				</p>
+				<h4>row:</h4>
+				<p>
+					Esse elemento é padrão do bootstrap e é bastante importante para o framework. Ela faz parceria com o “container”.
+					Se vocês entenderam bem o conceito de “Grid System” da aula BOOTSTRAP 3.0 – GRID SYSTEM, então vai ser fácil compreender o sentido do “row”.
+					O “container” cria um quadrado imaginário em volta dos elementos e o “row”, que fica sempre dentro do “container”, divide esse “quadrado” em linhas.
+				</p>
+				<p> row define uma estrutura fixa, trabalhando em pixels.</p>
+				<h4>row-fluid:</h4>
+				<p>row-fluid define uma estrutura fluida, trabalhando em porcentagem.</p>
+
+				<h4>col-md-*</h4>
+				<p> As divs que possuem classes como “col-md-9 / col-sm-? / col-lg-?” e etc, são identificadas como colunas. </p>
+				<p></p>O “md” indica que quando o site estiver sendo visualizado em resolução maior ou igual a 992px, aquele elemento terá o número de colunas identifica pela classe “col-md-numero“.
+				<p>Portanto, em nosso exemplo o conteúdo terá 9 colunas na resolução “md” e o sidebar terá 3 colunas.</p>
+				
+				<h4>col-md-offset-3</h4>
+				<p>A classe “col-md-offset-3” indica que aquele elemento será empurrado 3 colunas para a direita. O 3 pode variar conforme a quantidade de colunas que deseja andar para a direito. Lembrando que a soma total da class col-md-offset-* mais a  classe col-md-* deve ser igual a 12.</p>
+			</article>
+		</section>
+		<section class="row" >
+			<article class="col-md-12 text-justify">
+				<h3 id="navegacao">Trabalhando navegação</h3>
+				
+				<p> role="navigation" o atributo tem o papel, dizer qual é o papel da tag para o navegador, usado para a semântica do código.</p> 
+				
+
+				<h4>navbar</h4>
+				<p>navbar identifica a criação do menu, portanto é classe pai desse elemento e extremamente necessária e insubistituível.</p>
+
+				<h4>navbar-default</h4>				
+				<p>navbar-default aplica estilo à navbar. Essa classe pode ser alterada pela classe “navbar-inverse” conforme sua necessidade. 
+
+				<h4>navbar-inverse</h4>
+				<p>A “navbar-inverse” apresenta um sistema de cores inversas a “navbar-default”.</p>
+
+				<h4>navbar-toggle</h4>
+				<p> Esse elemento é o botão que aparece quando o site é apresentado em resoluções menores para que o menu possa ser visualizado.</p>
+
+				<h4>navbar-brand</h4>
+				<p>O navbar-brand é o lugar onde sua LOGO deve ficar. Essa classe possui configurações css que definem a visualização da logo nos dispositivos móveis. Geralmente eu acrescento a tag &lt;h1&gt; dentro desse elemento para poder informar aos mecanismos de busca que o nome do site, na página index.html é o elemento mais importante, mas isso exige algumas configurações css para modificar o estilo do h1.</p>
+
+				<h4>collapse e navbar-collapse</h4>
+				<p><span class="azul">&lt;div class=”collapse navbar-collapse”&gt;</span>: Aqui começa o menu. Tudo que estiver dentro desse elemento vai ser renderizado dentro do contexto do menu. Ao reduzir a tela do computador, ele compacta os elementos internos e esconde, sendo possível visualizar somente ao clicar no botão &lt;button class=”navbar-toggle”&gt; para expandir o menu.</p>
+
+				<h4>nav e navbar-nav</h4>
+				<p><span class="azul">&lt;ul class=”nav navbar-nav”&gt;</span>: Inicia a lista de links do menu. As 2 classes são necessárias para esse tipo de menu superior.</p>
+
+				<h4>active</h4>
+				<p><span class="azul">&lt;li class=”active”&gt;</span>: A classe “active” é utilizada para informar o item de menu que está selecionado, a página que está sendo visualizada.</p>
+
+				<h4>navbar-form</h4>
+				<p><span class="azul">&lt;form class=”navbar-form navbar-left”&gt;</span>: É o formulário de pesquisa que iremos utilizar.</p>
+				<p><span class="azul">navbar-form:</span> indica um formulário adaptado para a navbar;</p>
+
+				<h4>navbar-left e navbar-right</h4>
+				<p><span class="azul">navbar-left:</span> acrescenta um “float:left” ao elemento. Podemos utilizar ao invés da classe “navbar-left” a classe “navbar-right” que faz o oposto, aplica um “float:right”.</p>
+
+				<h5 class="red">Demos de exemplos</h5>
+				<p><a href="demo/barra-navegacao-fixa.html" alt="" title="" target="_blank">Demo barra de navegação fixa no topo</a></p>
+				<p><a href="demo/barra-navegacao-fixa2.html" alt="" title="" target="_blank">Demo barra de navegação fixa no topo 2</a></p>
+			</article>
+		</section>
+		<section class="row" id="imagem">
+			<article class="col-md-12 text-justify">
+				<h3 > Trabalhando imagens</h3>
+
+				<h4>img-responsive</h4>
+				<p>
+					<span class="azul">&lt;img src="..." class="img-responsive" alt="..."&gt;</span>:
+					adiciona a classe .img-responsive. Essa classe modifica a largura máxima e a altura da imagem – e com isso ela consegue se ajustar ao layout ficando responsiva. A imagem vai ficar limitada, com o tamanho do elemento col-md-*, em que ela estiver contida. 
+				</p>
+
+				<h4>img-rounded</h4>
+				<p>A classe <span class="azul">.img-rounded </span> adiciona cantos arredondados na imagem.</p>
+
+				<h4>img-circle</h4>
+				<p>A classe <span class="azul"> .img-circle</span> que transforma a imagem em um círculo. É possível usar estas classes junto com a classe .img-responsive.</p>
+
+				<h4>img-thumbnail</h4>
+				<p>A classe <span class="azul">.img-thumbnail </span> modifica a imagem com estilos de miniatura. É possível usar estas classes junto com a classe .img-responsive.</p>
+
+				<p>
+					Pode ser que você precise definir a altura e largura da imagem. Mas, se estiver usar corretamente  o grid system, os tamanhos vão ficar proporcionais.<br/>
+					Por outro lado, é uma boa prática definir na marcação os tamanhos de cada imagem. A sugestão é que sempre coloque os estilos para min-width e min-heigth para as suas imagens, mesmo usando a classe .img-responsive.
+				</p>
+
+				<p>Imagens em miniaturas, ou Thumbnails para galerias de fotos. Existe um componente no Bootstrap chamado Thumbnails, que permite melhorar o grid system para exibir imagens, vídeos, textos e outros itens em formato tabular. Ou seja, é perfeito para galerias e catálogos.
+				</p>
+
+				<p> 
+					Para fazer isso, você deve usar a classe <span class="azul">.thumbnail</span> no elemento que contém a imagem.<br/>
+					Logo depois da imagem, pode se criar uma div com a classe <span class="azul">.caption</span> . Esta classe permite criar legendas para a imagem que foi definida. Esse item é opcional.<br/>
+
+					Além de criar legendas, a .caption permite colocar qualquer outro componente visual do Bootstrap, como botões, painéis, títulos e textos, que podem ser úteis dependendo do seu design visual.<br/>
+
+					A diferença entre a classe .thumbnail e a anterior, .img-thumbnail, é justamente a de permitir adicionar outros itens junto à imagem, como se fossem propriedades ou complementos dela.
+				</p>
+
+				<h3>Imagens de Destaque com Media Object</h3>
+				<p>
+					O <span class="azul">Media Object</span> permite criar estilos para a construção de vários tipos de componentes (como comentários em blogs, tweets, etc) que apresentam a imagem à esquerda ou alinhado à direita do conteúdo. É extremamente útil para listagem de notícias, ou artigos, por exemplo.
+				</p>
+				<p>
+					Para cada item da lista, você deve criar uma div com a classe <span class="azul">.media </span>(neste exemplo, cada div.media é uma notícia).<br>
+					A imagem de destaque à esquerda, utiliza-se a class <span class="azul">.media-left</span>.<br>
+
+					A classe <span class="azul">.media-body</span> que nada mais é do que o resumo da notícia (mas poderia ser um comentário, por exemplo). Pode-se utilixar na div ou em outro elemento que traz a descrição.<br>
+
+					Dentro do .media-body, utiliza-se ainda a class <span class="azul">.media-heading</span> para o titulo da nóticia.
+				</p>
+				<h5 class="red">Demos de exemplos:</h5>
+				<p> <a href="demo/img-destaque.html" alt="" title="" target="_blank">Demo da imagem em destaque</a></p>
+				
+			</article>			
+	   	</section>
+	   	</div>
+    </div>	<!-- content-fluid -->
+<footer>
+	<div class="container">
+		<div class="col-md-7 text-center">
+			Desenvolvido por <a href="http://patigc.github.io/patriciaGraziano/index.html" target="_blank" alt="">Patricia Graziano</a>
+		</div>
+		<div class="col-md-5 ">
+	   		Perfil no <a href="https://br.linkedin.com/in/patricia-graziano-costa-b535a426"target="_blank" alt="">Linkedin</a> 
+	   	</div>
+	</div>
+</footer>
+
+	<!-- jQuery (necessario para os plugins Javascript Bootstrap) -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Conceito Bootstrap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+</head>
+<body>
+	<nav class=" navbar-fixed-top bg-azul">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <p class="navbar-text">Conceito Bootstrap</p>
+            </div>
+            <div class="collapse navbar-collapse" id="nav-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+					<li class="active"><a href="conceito.html">Conceito</a></li>
+					<li><a href="classe.html" alt="">Classes</a></li>
+					<li><a href="praticando.html">Praticando</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="jumbotron" style="background:#2dcc70;">
+		<h1>Conceito  Bootstrap!</h1>
+	</header>	
+	<section class="container-fluid">
+	 <div role="main">
+	 	<div class="row">
+	 		<div class="col-md-12">
+	 			
+				<h2>O Bootstrap é Mobile First.</h2>
+				<p>
+					Isso quer dizer que o framework assume, inicialmente, que a tela é de um dispositivo móvel, com tamanho pequeno. Assim, ele adapta todos os conteúdos para o tamanho menor. Depois, ele verifica o tamanho real da tela e vai ajustando os itens para que fiquem posicionados corretamente, conforme o tamanho e a resolução.
+				</p>
+				<p>
+					<span class="red">&raquo;</span> Quando você for projetar, e implementar, o layout e o design do site (ou app) você deve projetar primeiro para as telas menores (celulares), depois para telas mídias (tablets) e, por fim, para telas maiores (desktops, etc.).
+				</p>
+				<p class="azul">Isso é a base do conceito de Mobile First.</p>
+				<br/>
+
+				<h3>No Bootstrap, existe o conceito de container.</h3>
+				<p>
+					O container é uma div, que garante que o seu layout vai ficar alinhado na página, e com margens para as laterais. Ele também centraliza o conteúdo na tela do browser. Dependendo do tamanho da tela, o container definirá automaticamente as larguras do seu layout, para que o conteúdo seja melhor visualizado.
+				</p>
+				<p>
+					<span class="red">&raquo;</span> Você deve usar um container para englobar o posicionamento de todos os elementos do layout da página.
+				</p>
+				<p class="azul">Nota: Todo “container” terá no mínimo 1 ‘row’ e toda ‘row’ terá no máximo 12 ‘colunas’.</p>
+			   
+				<br/>
+				<h3>HTML5 Shim o Respond.js e o framework jQuery no Bootstrap</h3>
+				<p>
+					O HTML5 Shim serve para permitir que browsers desatualizados (internet explorer e cia) aceitem tags nativas do HTML5 e o Respond.js é uma forma otimizada de processar media queries, que são regras CSS para estilizar elementos com base na resolução do dispositivo. Eles estão envoltos na tag &lang;!--[if lt IE 9]&rang; &lang;![endif]--&rang;, que significa elas apenas serão aplicadas se o navegador for internet explorer 9 para baixo.
+				</p>
+				<p>
+					jQuery é um framework JS (JavaScript) e o Bootstrap depende dele (as famosas dependências!) para trabalhar com funções JavaScript. Note que são incluidos no final do documento, antes  do fechamento da tag body, chamando primeiro o link do jQuery e em seguida o link para o o arquivo de funções JavaScript do Bootstrap bootstrap.js.
+				</p>
+				<p>
+					<span class="red">&raquo;</span> O arquivo de funções JavaScript do Bootstrap bootstrap.js está abaixo do jQuery justamente porque precisa que o jQuery já tenha sido carregado para que as funções operem corrementa, caso contrário o funções vão apresentar falha.
+				</p>
+				
+				<p class="azul">
+					Nota: O link para arquivos JS normalmente é feito no fim do documento, para não impactar no carregamento do conteúdo da página, já que a maioria das funções JS atuam apenas por trás do design.
+				</p>
+					
+				<br/>
+				<h3>Estrutura de arquivo Bootstrap</h3>
+				<p>Descompacte a pasta do Bootstrap e você vai ter três pastas, css, js e fonts. <p>
+				<p>
+					Na pasta CSS temos as folhas de estilo que compõem o design do framework. Note que existem dois arquivos apenas com variações de extensão. Arquivos com extensão .min são arquivos minificados. Basicamente são excluídos os espaçamentos do arquivo para minimizar o processamento e otimizar a execução do mesmo (a regra vale para o arquivo CSS e JS).
+				</p>
+				<p>
+					Os arquivos da pasta FONTS compõem a tipografia do framework que também inclui ícones.
+				</p>
+				<p>
+					Neste projeto, utiliza-se os arquivos bootstrap.css e bootstrap.js, que são mais densos que os arquivos minificados, porém para quem está aprendendo é o retorno de erros fica mais claro pois o arquivo está formatado seguindo boas práticas. Depois podemos apenas trocar o link para o arquivo minificado e enquadramos o projeto nos padrões de performance.
+				</p>			   
+				<br/>
+					
+				   
+				<h3>Grid do Bootstrap</h3>
+				<p>Algumas premissas que devem ser respeitadas ao utilizar a grid (essas informações estão na documentação oficial do Bootstrap, na parte de introdução ao Grid System):<p>
+				<ul>
+					<li class="margin-bottom">
+						Toda linha, ou row, tem que estar dentro de um container (classe geralmente aplicada a uma DIV para determinar que ali vão conter linhas que vão agrupar o layout) ou container-fluid. <br/>
+						A diferença entre as duas classes é que a primeira é boxed, tem limite para a medida das laterais, e a segunda ocupa todo espaço da tela sem margens laterais.
+					</li>
+					<li class="margin-bottom">
+						Toda coluna, ou columns, fica dentro de uma row/linha (que segue a mesma lógica dos containers, geralmente é utilizado uma DIV para empregar o papel de linha). <br/>
+						As colunas agrupam conteúdo, então as columns devem ser os únicos elementos filho dentro de uma row. 
+						<br/>
+						Você pode ter problema de posicionamento de elementos se essa ordem não for respeitada.
+					</li>
+					<li class="margin-bottom">
+						Para criar o container, as colunas e as linhas, existem classes CSS pré definidas; geralmente utilizadas no elemento DIV, como as classes .container ou .container-fluid, .row e .columns.
+					</li>
+					<li class="margin-bottom">
+						Existem espaçamentos entre as colunas, e entre o conteúdo dentro de uma coluna.
+					</li>
+					<li class="margin-bottom">
+						Para determinar qual o espaço ocupado por uma coluna, dentro do limite de 12 colunas, utilizamos uma classe como essa .col-xs-12, que determina que aquela coluna vai ocupar o espaço de 12 colunas só pra ela, em dispositivos de tela pequena (smartphones).
+					</li>
+					<li class="margin-bottom">
+						Existem classes espaciais para determinar qual o espaço que determinada coluna vai ter em diferentes tamanhos de tela.<br/>
+						Observe que a classe que indica o espaço ocupado é composta por três itens: col, xs e um número de 0 a 12, dependendo do seu limite de colunas. O parâmetro xs indica que essa coluna vai ocupar 12 colunas em telas pequenas.
+					</li>
+					<li class="margin-bottom">
+						Além da medida xs utilizada para telas com até 768px de largura, também temos as medidas sm, para telas com até 991px de largura, md para telas até 1199px, e a lg para telas com no mínimo 1200px de largura.
+					</li>
+					<li class="margin-bottom">
+						Qualquer medida acima de 1200px assume ainda a configuração da medida lg.
+					</li>
+				</ul>
+	 		</div>
+	 	</div>
+	 </div>  	
+    </section>
+<footer>
+	<div class="container">
+		<div class="col-md-7 text-center">
+			Desenvolvido por <a href="http://patigc.github.io/patriciaGraziano/index.html" target="_blank" alt="">Patricia Graziano</a>
+		</div>
+		<div class="col-md-5 ">
+	   		Perfil no <a href="https://br.linkedin.com/in/patricia-graziano-costa-b535a426"target="_blank" alt="">Linkedin</a> 
+	   	</div>
+	</div>
+</footer>	
+
+	<!-- jQuery (necessario para os plugins Javascript Bootstrap) -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
